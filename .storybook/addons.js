@@ -4,3 +4,5 @@ import '@storybook/addon-links/register';
 import '@storybook/addon-storysource/register';
 // To interact with component props directly
 import '@storybook/addon-knobs/register';
+// accessibility
+import '@storybook/addon-a11y/register';
