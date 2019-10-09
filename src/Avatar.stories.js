@@ -5,7 +5,8 @@ import { Avatar } from './Avatar';
 export default {
 	title: 'Design System|Avatar',
 	parameters: {
-		component: Avatar
+		component: Avatar,
+		componentSubtitle: 'Displays an image that represents a user or organization',
 	}
 };
 
@@ -41,6 +42,9 @@ export const sizes = () => (
 		/>
 	</div>
 );
+sizes.story = {
+  parameters: { docs: { storyDescription: '4 sizes are supported.' } },
+};
 
 export const initials = () => (
 	<div>
@@ -73,7 +77,12 @@ export const large = () => (
 );
 
 export const knobs = () => (
-<Avatar loading={boolean('Loading')} size={select('Size', ['tiny', 'small', 'medium', 'large'])} username="Dominic Nguyen" src="https://avatars2.githubusercontent.com/u/263385"/>
+  <Avatar
+    loading={boolean('Loading')}
+    size={select('Size', ['tiny', 'small', 'medium', 'large'])}
+    username="Dominic Nguyen"
+    src="https://avatars2.githubusercontent.com/u/263385"
+  />
 );
 
 knobs.story = {
