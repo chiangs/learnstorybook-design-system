@@ -1,9 +1,71 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 
-<Meta title="Design System|Introduction" />
+<Meta title='Design System|Introduction' />
 
 # Introduction to the Learn Storybook design system
 
 The Learn Storybook design system is a subset of the full [Storybook design system](https://github.com/storybookjs/design-system/), created as a learning resource for those interested in learning how to write and publish a design system using best practice techniques.
 
 Learn more at [Learn Storybook](https://learnstorybook.com).
+
+## **[Go back to chiangs.dev.](https://chiangs.dev)**
+
+## Skills and best practices for professional workflows in this tutorial
+
+### Architecture
+
+**What components should be included?**
+
+We want nimble teams and highly maintainable systems, that means avoiding excess code maintenace.
+
+An inventory of components should be conducted and then prioritize the most common or often used.
+
+Design systems should only contain pure and presentational components. These components deal with how UI appears. They respond exclusively to props, do not contain app-specific business logic, and are agnostic to how data loads.
+
+Design systems aren’t the superset of every component library in an organization. That would be a headache to keep track of. One-offs should not be included either.
+
+### Building
+
+This portion included the intial setup and inclusion of add-ons that improve the development and reference experience for users.
+
+Result: Storybook and development add-ons installed, stories found and listed.
+
+### Reviewing
+
+Continuous integration and visual review is a common characteristic of mature professional design system improvement workflows. It helps to mitigate inconsistencies but should facilitate quick feedback and consensus.
+
+Result: Continuous Integration through CircleCI and immediate deployment of production and preview branches from repo using Netlify.
+
+### Testing
+
+Automate test design system appearance, functionality, and accessibility to prevent UI bugs.
+
+UI test presentational components, unit tests to verify whether the UI code returns the correct output given a controlled input and validate specific functionality.
+
+> Articulate supported component states as stories to clarify which combinations of inputs yields a given state. Ruthlessly omit unsupported states to reduce noise.
+
+> Render components consistently to mitigate variability that can be triggered by randomized (Math.random) or relative (Date.now) inputs.
+
+Result: Setup Chromatic as part of the CI pipeline. Unit test with React-testing-library. Accessibility via A11y add-on.
+
+### Documentation
+
+Create a design system “user manual” to help stakeholders reuse components in their apps. Along the way, we’ll uncover UI documentation best practices used by teams at Shopify, Microsoft, Auth0, and the UK government.
+
+Result: Documentation setup. During this step, I noticed a mistake in the documentation and created a [Pull Request.](https://github.com/chromaui/learnstorybook.com/pull/173)
+
+### Distribution
+
+### Workflow
+
+A preview of a Pull Request change can be seen here (it's not pretty) which assists reviewers and improves quality of workflow.
+
+[Pull Request](https://github.com/chiangs/learnstorybook-design-system/pull/1)
+
+[Deployed PR branch preview](https://5d9c8588d1e3670009a3c22b--chiangs-sbds.netlify.com/?path=/story/design-system-button--all-buttons)
+
+## Other technologies used
+
+-   CircleCI
+-   ChromaticQA Automated Visual Testing
+-   Netlify
