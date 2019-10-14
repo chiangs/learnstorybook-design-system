@@ -5,12 +5,12 @@ import { GlobalStyle } from '../src/shared/global';
 import 'storybook-chromatic';
 
 addDecorator(withA11y);
-addDecorator(story => (
-	<>
-		<GlobalStyle />
-		{story()}
-	</>
-));
+// addDecorator(story => (
+// 	<>
+// 		<GlobalStyle />
+// 		{story()}
+// 	</>
+// ));
 
 // automatically import all files ending in *.stories.js
 configure(
